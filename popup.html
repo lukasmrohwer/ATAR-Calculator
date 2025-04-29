@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 5px;
+            min-width: 400px;
+            }
+        h1 {
+            font-size: 15px;
+            text-align: center;
+            }
+        h2 {
+            font-size: 10px;
+            text-align: center;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            height: 150px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+    <body>
+        
+        <h1>ATAR Calculator</h1>
+        <hr>
+
+        <div class="row">
+            <div class="column">
+                <h2>Add Subject Automatically</h2>
+                <p>Click the button below while on the assessments page of the subject to automatically calculate an average and add it to the list.</p>
+                <button id="add">Add Subject</button>
+            </div>
+            <div class="column">
+                <h2>Add Subject Manually</h2>
+                <label for="name">Subject Name</label>
+                <input type="text" id="name" placeholder="e.g. French"><br>
+                <label for="average">Subject Average</label>
+                <input type="text" id="average" placeholder="e.g. 78.28"><br>
+                <button id="m_add">Add Subject</button>
+        </div>
+        <hr>
+        <div class="row" style="text-align: center;">
+            <h2>List of Subjects</h2>
+            <div id="subjectscontainer"></div>
+            <br>
+            <button id="clear">Clear Subjects</button>
+        </div>
+        <hr>
+        <div id="result" style="text-align: center;">
+            <button id="calculate">Calculate ATAR</button>
+            <h1 id="predictedatar"></h1>
+        </div>
+        
+    </body>
+
+    <script src="popup.js"></script>
+    <script src="conversion.js"></script>
+
+</html>
